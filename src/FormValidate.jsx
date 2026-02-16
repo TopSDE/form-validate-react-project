@@ -86,69 +86,79 @@ const FormValidate = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <section>
-          <h1>FORM VALIDATION</h1>
+      <form 
+      onSubmit={handleSubmit} 
+      className='bg-slate-400 w-80 rounded-lg shadow-lg shadow-black mx-auto mt-20 p-5'
+      >
+        <section className='py-2'>
+          <h1 className='text-red-600 text-2xl font-medium text-center underline'>FORM VALIDATION</h1>
         </section>
         
-        <section>
+        <section className='py-2'>
           <label htmlFor="req">Required : </label>
           <div>
-            <input type="text" id="req" name='required' value={required} onChange={handleChange}/>
+            <input type="text" id="req" name='required' value={required} onChange={handleChange}
+            className='w-full rounded-lg border-black border-2' />
           </div>
         </section>
-        <span>{errors.required}</span>
+        <span className='text-red-600'>{errors.required}</span>
 
-        <section>
+        <section className='py-2'>
           <label htmlFor="maxlen">Max Length : </label>
           <div>
-            <input type="text" id="maxlen" name='maxLength' value={maxLength} onChange={handleChange}/>
+            <input type="text" id="maxlen" name='maxLength' value={maxLength} onChange={handleChange}
+            className='w-full rounded-lg border-black border-2' />
           </div>
         </section>
-        <span>{errors.maxLength}</span>
+        <span className='text-red-600'>{errors.maxLength}</span>
 
-        <section>
+        <section className='py-2'>
           <label htmlFor="minlen">Min Length : </label>
           <div>
-            <input type="text" id="minlen" name='minLength' value={minLength} onChange={handleChange}/>
+            <input type="text" id="minlen" name='minLength' value={minLength} onChange={handleChange}
+            className='w-full rounded-lg border-black border-2' />
           </div>
         </section>
-        <span>{errors.minLength}</span>
+        <span className='text-red-600'>{errors.minLength}</span>
 
-        <section>
+        <section className='py-2'>
           <label htmlFor="vallen">Value Length : </label>
           <div>
-            <input type="text" id="vallen" name='valueLength' value={valueLength} onChange={handleChange}/>
+            <input type="text" id="vallen" name='valueLength' value={valueLength} onChange={handleChange}
+            className='w-full rounded-lg border-black border-2' />
           </div>
         </section>
-        <span>{errors.valueLength}</span>
+        <span className='text-red-600'>{errors.valueLength}</span>
 
-        <section>
+        <section className='py-2'>
           <label htmlFor="maxr">Max Range : </label>
           <div>
-            <input type="number" id="maxr" name='maxRange' value={maxRange} onChange={handleChange}/>
+            <input type="number" id="maxr" name='maxRange' value={maxRange} onChange={handleChange}
+            className='w-full rounded-lg border-black border-2' />
           </div>
         </section>
-        <span>{errors.maxRange}</span>
+        <span className='text-red-600'>{errors.maxRange}</span>
 
-        <section>
+        <section className='py-2'>
           <label htmlFor="minR">Min Range : </label>
           <div>
-            <input type="number" id="minR" name='minRange' value={minRange} onChange={handleChange}/>
+            <input type="number" id="minR" name='minRange' value={minRange} onChange={handleChange}
+            className='w-full rounded-lg border-black border-2' />
           </div>
         </section>
-        <span>{errors.minRange}</span>
+        <span className='text-red-600'>{errors.minRange}</span>
 
-        <section>
+        <section className='py-2'>
           <label htmlFor="ranVal">Range Value : </label>
           <div>
-            <input type="number" id="ranVal" name='rangeValue' value={rangeValue} onChange={handleChange}/>
+            <input type="number" id="ranVal" name='rangeValue' value={rangeValue} onChange={handleChange}
+            className='w-full rounded-lg border-black border-2' />
           </div>
         </section>
-        <span>{errors.rangeValue}</span>
+        <span className='text-red-600'>{errors.rangeValue}</span>
 
-        <section>
-          <button>SUBMIT</button>
+        <section className='py-2 flex justify-center'>
+          <button className='py-2 w-40 bg-blue-500 rounded-md text-white'>SUBMIT</button>
         </section>
 
       </form>
